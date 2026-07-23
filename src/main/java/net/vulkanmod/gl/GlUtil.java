@@ -80,6 +80,7 @@ public abstract class GlUtil {
     public static int vulkanFormat(int glInternalFormat) {
         return switch (glInternalFormat) {
             case GL30.GL_UNSIGNED_INT_8_8_8_8_REV -> VK_FORMAT_R8G8B8A8_UINT;
+            case GL30.GL_DEPTH32F_STENCIL8 -> VK_FORMAT_D32_SFLOAT_S8_UINT;
             case GL11.GL_DEPTH_COMPONENT, GL30.GL_DEPTH_COMPONENT32F, GL30.GL_DEPTH_COMPONENT24 ->
 //                    switch (type) {
 //                        case GL11.GL_FLOAT -> VK_FORMAT_D32_SFLOAT;
